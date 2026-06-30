@@ -1,0 +1,20 @@
+{
+  "name": "qa-automation-suite",
+  "version": "1.0.0",
+  "description": "TypeScript QA automation suite using Playwright (UI), Vitest (API/unit), and Docker",
+  "scripts": {
+    "test:ui": "playwright test",
+    "test:ui:headed": "playwright test --headed",
+    "test:ui:report": "playwright show-report",
+    "test:api": "vitest run tests/api",
+    "test:unit": "vitest run tests/unit",
+    "test:all": "npm run test:unit && npm run test:api && npm run test:ui",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "vitest": "^2.1.1",
+    "typescript": "^5.6.2",
+    "@types/node": "^22.7.0"
+  }
+}
